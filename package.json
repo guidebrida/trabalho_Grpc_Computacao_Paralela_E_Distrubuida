@@ -1,0 +1,18 @@
+{
+  "name": "filmes_grpc",
+  "version": "1.0.0",
+  "description": "CRUD de filmes com grpc",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "author": "Patrick Elias, Eduardo Pacheco e Guilherme de Brida",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.7.7",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "grpc": "^1.24.11",
+    "hbs": "^4.2.0",
+    "uuid": "^9.0.0"
+  }
+}

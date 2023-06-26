@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+service FilmesService {
+    rpc GetAll (Empty) returns (FilmesList) {}
+    rpc Get (FilmesRequestId) returns (Filmes) {}
+    rpc Insert (Filmes) returns (Filmes) {}
+    rpc Update (Filmes) returns (Filmes) {}
+    rpc Remove (FilmesRequestId) returns (Empty) {}
+}
+
+message Empty {}
+
+message Filmes {
+    string id = 1;
+    string nome = 2;
+    string diretor = 3;
+    string estreia = 4;
+}
+
+message FilmesList {
+    repeated Filmes filmes = 1;
+}
+
+message FilmesRequestId {
+    string id = 1;
+}
